@@ -1,6 +1,6 @@
 <template>
   <tr
-    :class="`VueTables__row ${props.rowAttrs.class}`"
+    :class="{ active: row.index == table.selectedRow, VueTables__row: true }"
     v-bind="props.rowAttrs.attrs"
     @click="props.rowEvents.click"
   >
@@ -21,14 +21,24 @@
 </template>
 
 <script>
-import VtTableCell from "vue-tables-2/compiled/components/VtTableCell";
-import VtChildRowToggler from "vue-tables-2/compiled/components/VtChildRowToggler";
+import VtTableCell from "vue-tables-2-premium/compiled/components/VtTableCell";
+import VtChildRowToggler from "vue-tables-2-premium/compiled/components/VtChildRowToggler";
 export default {
-  name: "MyTableRow",
+  name: "IochordRow",
   props: ["props"],
   components: { VtTableCell, VtChildRowToggler },
+  data() {
+    return {
+      row: this.$parent.$parent.$props,
+      table: this.$parent.$parent.$parent.$parent.$parent.$parent.$parent
+        .$parent.$parent.$data,
+    };
+  },
 };
 </script>
 
 <style scoped>
+.active {
+  background-color: #e3f2fd;
+}
 </style>

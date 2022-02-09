@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Hello Vue in CodeSandbox!" />
+    <IochordGrid msg="Hello Vue in CodeSandbox!" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import IochordGrid from "./components/IochordGrid";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    IochordGrid,
   },
 };
 </script>

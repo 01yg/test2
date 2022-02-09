@@ -29,7 +29,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
 export default {
-  name: "HelloWorld",
+  name: "IochordGrid",
   props: {
     msg: String,
   },
@@ -51,7 +51,6 @@ export default {
       columns: ["name", "code", "uri"],
       data: getData(),
       options: {
-        columnsDropdown: true,
         filteringbycolumn: false,
         headings: {
           name: "Country Name",
@@ -72,14 +71,6 @@ export default {
     };
   },
 };
-
-function toggleRow(rowId) {
-  console.log(rowId);
-}
-
-function selectRow(rowId) {
-  console.log(rowId);
-}
 
 function getData() {
   return [
@@ -502,8 +493,5 @@ li {
 }
 a {
   color: #42b983;
-}
-.active {
-  color: red;
 }
 </style>
