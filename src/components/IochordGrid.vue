@@ -1,6 +1,5 @@
 <template>
   <div>
-    <button @click.stop="onClick">click</button>
     <v-client-table
       ref="vct"
       :columns="columns"
@@ -34,15 +33,8 @@ export default {
     msg: String,
   },
   methods: {
-    onClick: function () {
-      console.log("onClick");
-      this.$refs.vct.setPage(2);
-    },
     onClickRow: function (row) {
-      console.log(`onClickRow: ${JSON.stringify(row)}`);
       this.selectedRow = row.index;
-      this.$refs.vct.selectRow(row.index);
-      this.$refs.vct.unselectRow(row.index);
     },
   },
   data() {
