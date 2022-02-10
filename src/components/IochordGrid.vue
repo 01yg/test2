@@ -45,12 +45,10 @@ export default {
       options: {
         filteringbycolumn: false,
         headings: {
-          name: "Country Name",
-          code: "Country Code",
+          name: "나라 이름",
+          code: "나라 코드",
           uri: "View Record",
         },
-        sortable: ["name", "code"],
-        filterable: ["name", "code"],
         selectable: {
           mode: "single", // or 'multiple'
           only: function (row) {
