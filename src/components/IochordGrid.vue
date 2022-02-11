@@ -31,6 +31,7 @@ export default {
   name: "IochordGrid",
   props: {
     msg: String,
+    data: [],
   },
   methods: {
     onClickRow: function (row) {
@@ -40,14 +41,13 @@ export default {
   data() {
     return {
       selectedRow: null,
-      columns: ["name", "code", "uri"],
-      data: getData(),
+      columns: ["department", "postion", "name"],
       options: {
         filteringbycolumn: false,
         headings: {
-          name: "나라 이름",
-          code: "나라 코드",
-          uri: "View Record",
+          department: "부서",
+          postion: "직금",
+          name: "이름",
         },
         selectable: {
           mode: "single", // or 'multiple'

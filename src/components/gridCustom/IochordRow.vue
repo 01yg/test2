@@ -5,7 +5,7 @@
     @click="props.rowEvents.click"
   >
     <vt-child-row-toggler
-      :row-id="props.rowId"
+      :row-id="row.index"
       v-if="props.childRowTogglerFirst"
     />
     <vt-table-cell
@@ -14,7 +14,7 @@
       :column="column"
     />
     <vt-child-row-toggler
-      :row-id="props.rowId"
+      :row-id="row.index"
       v-if="props.childRowTogglerLast"
     />
   </tr>

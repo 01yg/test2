@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <IochordGrid msg="Hello Vue in CodeSandbox!" />
+    <IochordGrid msg="Hello Vue in CodeSandbox!" :data="data" />
   </div>
 </template>
 
@@ -11,6 +11,32 @@ export default {
   name: "App",
   components: {
     IochordGrid,
+  },
+  data() {
+    return {
+      data: [
+        { department: "대표**", postion: "대표**", name: "이상*", id: 1 },
+        { department: "대표**", postion: "대표**", name: "박병*", id: 2 },
+        { department: "경영***", postion: "P*", name: "정종*", id: 3 },
+        { department: "기술***", postion: "이*", name: "김운*", key: 4 },
+        { department: "연*소*", postion: "상*", name: "원석*", key: 5 },
+        { department: "Front", postion: "PR*", name: "이지*" },
+        { department: "Front", postion: "PR*", name: "장유*" },
+        { department: "Front", postion: "PR*", name: "옥경*" },
+        { department: "Front", postion: "PR*", name: "정영*" },
+        { department: "Front", postion: "PR*", name: "최유*" },
+        { department: "연*기*", postion: "PR*", name: "리스*" },
+        { department: "연*기*", postion: "PR*", name: "정윤*" },
+        { department: "연*기*", postion: "PR*", name: "최지*" },
+        { department: "연*기*", postion: "PR*", name: "프란*" },
+        { department: "연*기*", postion: "PR*", name: "김은*" },
+        { department: "Back", postion: " P*", name: "김병*" },
+        { department: "Back", postion: "PR*", name: "이채*" },
+        { department: "Back", postion: "PR*", name: "풀샤*" },
+        { department: "Back", postion: "PR*", name: "동태*" },
+        { department: "Back", postion: "PR*", name: "서예*" },
+      ],
+    };
   },
 };
 </script>
