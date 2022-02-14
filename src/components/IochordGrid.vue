@@ -6,6 +6,8 @@
       :data="data"
       :options="options"
       @row-click="onClickRow"
+      v-bind="$attrs"
+      @pagination="onChangePagination"
     >
       <a
         slot="uri"
@@ -37,6 +39,13 @@ export default {
     onClickRow: function (row) {
       this.selectedRow = row.index;
     },
+    onChangePagination: function (row) {
+      console.log("onChangePagination");
+      console.log(row);
+    },
+  },
+  created() {
+    console.log("created");
   },
   data() {
     return {
@@ -56,6 +65,9 @@ export default {
           },
           selectAllMode: "all", // or 'page',
           programmatic: true,
+        },
+        pagination: {
+          virtual: true,
         },
       },
     };
@@ -78,5 +90,11 @@ li {
 }
 a {
   color: #42b983;
+}
+</style>
+<style>
+.VueTables__wrapper {
+  max-height: 200px;
+  overflow-y: scroll;
 }
 </style>
